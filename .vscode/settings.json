@@ -1,0 +1,6 @@
+{
+    "files.exclude": {
+        "**/bun.lock": true,
+        "**/bun.lockb": true
+    }
+}

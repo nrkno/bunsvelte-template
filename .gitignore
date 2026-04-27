@@ -1,0 +1,20 @@
+# Dependencies
+node_modules
+
+# Build output
+dist
+build
+.output
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+bun-debug.log
