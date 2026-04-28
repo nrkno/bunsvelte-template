@@ -48,13 +48,33 @@ This ensures correct syntax highlighting and support for Svelte 5-specific code.
 
 ## 📁 Folder Structure
 
-├── src/
-│ ├── App.svelte # Your main component
-│ ├── global.d.ts # Types for static files (images, etc.)
-│ └── main.ts # Entry point for Svelte
-├── static/ # For static files (e.g., favicon.ico)
-├── bunfig.toml # Tells Bun to compile Svelte files
-├── index.html # Standard HTML file
-├── package.json # Dependencies and scripts
-├── server.ts # Bun's built-in server
-└── tsconfig.json # TypeScript configuration
+```mermaid
+graph LR
+    %% Hovedmappe
+    Root["📁 / (Root)"]
+    
+    %% Mapper på øverste nivå
+    Root --- vscode["📁 .vscode/"]
+    Root --- src["📁 src/"]
+    Root --- static["📁 static/"]
+    
+    %% Filer i Root
+    Root --- gitignore["📄 .gitignore"]
+    Root --- bunlock["📄 bun.lock"]
+    Root --- bunfig["📄 bunfig.toml"]
+    Root --- index["📄 index.html"]
+    Root --- package["📄 package.json"]
+    Root --- readme["📄 README.md"]
+    Root --- server["📄 server.ts"]
+    Root --- tsconfig["📄 tsconfig.json"]
+    
+    %% Fil i .vscode
+    vscode --- vscode_settings["📄 settings.json"]
+    
+    %% Filer i src-mappen
+    src --- app["📄 App.svelte"]
+    src --- global["📄 global.d.ts"]
+    src --- main["📄 main.ts"]
+    
+    %% Filer i static-mappen
+    static --- favicon["📄 favicon.ico"]
