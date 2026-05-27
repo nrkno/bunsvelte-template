@@ -1,0 +1,23 @@
+version: 2
+
+registries:
+  npm-registry:
+    type: npm-registry
+    url: https://registry.npmjs.org
+    token: ${{ secrets.NPM_TOKEN_READ }}
+
+updates:
+  - package-ecosystem: "bun"
+    directory: "/"
+    registries:
+      - npm-registry
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Europe/Oslo"
+
+    groups:
+      ukentlig-oppdatering:
+        patterns:
+          - "*"
