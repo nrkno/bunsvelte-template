@@ -4,7 +4,10 @@
     "type": "module",
     "scripts": {
         "dev": "bun run server.ts",
-        "build": "bun install"
+        "build": "bun build ./src/main.ts --outdir ./dist --target browser",
+        "typecheck": "bunx svelte-check --tsconfig ./tsconfig.json",
+        "test": "bun test",
+        "format": "prettier --write ."
     },
     "dependencies": {
         "svelte": "^5.0.0",

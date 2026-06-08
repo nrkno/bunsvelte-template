@@ -1,12 +1,12 @@
 <script lang="ts">
-  let title = "Hei fra Bun og Svelte!";
-  let counter = $state(0);
+  const pageTitle = "Bun + Svelte 5 Template";
+  let clickCount = $state(0);
 </script>
 
 <main>
-  <h1>{title}</h1>
-  <p>Du har trykket på knappen {counter} ganger.</p>
-  <button onclick={() => counter++}> Klikk meg </button>
+  <h1>{pageTitle}</h1>
+  <p>Du har trykket på knappen {clickCount} ganger.</p>
+  <button onclick={() => clickCount++}> Klikk meg </button>
 </main>
 
 <style>
